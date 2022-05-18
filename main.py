@@ -594,7 +594,7 @@ async def account_login(bot: Client, m: Message):
                 cook = "cookie.txt"
 	    elif raw_text0 in "anytimelearning":
 		y= url.replace("/", "%2F")
-		route=f"https://live.anytimelearning.in/?route=common/ajax&mod=liveclasses&ack=getcustompolicysignedcookiecdn&stream=https%3A%2F%2Fvodcdn.anytimelearning.in%2F{y[44:-14]}%2Fmaster.m3u8
+		route=f"https://live.anytimelearning.in/?route=common/ajax&mod=liveclasses&ack=getcustompolicysignedcookiecdn&stream=https%3A%2F%2Fvodcdn.anytimelearning.in%2F{y[44:-14]}%2Fmaster.m3u8"
 		getstatusoutput(f'curl "{rout}" -c "cookie.txt"')
 		cook = "cookie.txt"
             Show = f"**Downloading:-**\n\n**Name :-** `{name}`\n\n**Url :-** `{url}`"
