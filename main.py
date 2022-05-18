@@ -44,7 +44,7 @@ logger = logging.getLogger()
 
 os.makedirs("./downloads", exist_ok=True)
 
-@bot.on_message(filters.command(["start"])& ~filters.edited)
+@bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text("Hello im txt file downloader\nPress /pyro to download links listed in a txt file in the format **Name:link**\n\nPress /link to download single link\nPress /ytdlp to know video info.\nPress /aio to download url.\n\nBot made by ACE")
 #testing topranker
@@ -61,7 +61,7 @@ async def account_login(bot: Client, m: Message):
 #     os.remove(y)
 #     os.remove("top.mp4")
         
-@bot.on_message(filters.command(["link"])& ~filters.edited)
+@bot.on_message(filters.command(["link"]))
 async def upload(bot: Client, m: Message):
     editable = await m.reply_text('Send link in **Name&link** format to download')
     input9: Message = await bot.listen(editable.chat.id)
@@ -513,7 +513,7 @@ async def account_login(bot: Client, m: Message):
         await m.reply_text(str(e))
     await m.reply_text("Done")
 
-@bot.on_message(filters.command(["top"])& ~filters.edited)
+@bot.on_message(filters.command(["top"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text(f"**Hi im Topranker dl**")
     input: Message = await bot.listen(editable.chat.id)
